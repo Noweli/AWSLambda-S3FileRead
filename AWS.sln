@@ -5,9 +5,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4C2ABB56-EA8F-45F2-A410-7A4F92D78EE9}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
-		omnisharp.json = omnisharp.json
-		README.md = README.md
-		template.yaml = template.yaml
 	EndProjectSection
 EndProject
 Global
