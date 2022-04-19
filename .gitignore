@@ -29,6 +29,12 @@
 # Icon must end with two \r
 Icon
 
+# Terraform
+.terraform/
+.terraform.*
+
+#Idea files
+.idea/
 
 # Thumbnails
 ._*

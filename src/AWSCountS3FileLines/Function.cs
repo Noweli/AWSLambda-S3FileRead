@@ -30,8 +30,9 @@ namespace AWSCountS3FileLines
             var eventFileKey = s3Event.Records[0].S3.Object.Key;
             var eventBucketName = s3Event.Records[0].S3.Bucket.Name;
 
-
             var file = await _s3Client.GetObjectAsync(eventBucketName, eventFileKey);
+            
+            context.Logger.LogLine($"Got file {eventFileKey}");
 
             using var fileStream = new StreamReader(file.ResponseStream);
 
@@ -47,6 +48,7 @@ namespace AWSCountS3FileLines
             }
 
             response.AppendLine($"Lines count: {lineCount}");
+            context.Logger.LogLine($"Lines count: {lineCount}");
 
             _ = await _s3Client.PutObjectAsync(new PutObjectRequest
             {
